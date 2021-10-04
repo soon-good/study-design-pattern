@@ -69,7 +69,7 @@ public class NYPizzaStore extends PizzaStore{
   - 이때 매뉴를 만들어내는 방식(값을 바인딩하는 방식)은 뉴욕스타일, 시카고 스타일마다 다르게 생성되어야 한다. 이런 이유로 치즈피자,페퍼로니 피자의 생성자에 NYPzzaIngredientFactory, ChicacoPizzaIngredientFactory 를 인자로 지정해 객체에 따라 Dto가 다른 형식으로 생성되게금 지정해주었다.
   - 이렇게 스트래티지 패턴으로 다양하게 적용하기 전까지는
 
-
+<br>
 
 ## 1 ) 단순한 팩토리 패턴
 
@@ -454,6 +454,34 @@ public class FactoryMethodApp {
 		System.out.println(chicagoStylePizza);
 	}
 }
+```
+
+<br>
+
+#### 출력결과
+
+```plain
+Preparing : 뉴욕 스타일 치즈 피자 
+도우 굽는 중...
+소스 추가 중 ... 
+토핑 추가 중  ... 
+토핑 :: 올리브
+토핑 :: 햄
+토핑 :: 버섯
+will be 20 minute
+Cutting the pizza
+boxing the Pizza
+study.io.javafactorypattern.domain.hardcoded.NYStyleCheesePizza@2a84aee7
+
+Preparing : 시카고 스타일 피자 
+도우 굽는 중...
+소스 추가 중 ... 
+토핑 추가 중  ... 
+토핑 :: 레지아노 치즈 추가
+will be 20 minute
+Cutting the Pizza into square slices
+boxing the Pizza
+study.io.javafactorypattern.domain.hardcoded.ChicagoStyleCheesePizza@30f39991
 ```
 
 <br>
